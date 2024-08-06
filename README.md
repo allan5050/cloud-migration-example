@@ -53,45 +53,38 @@ To regenerate the diagram:
 
 ## Key Components of the Solution
 Frontend:
-
-Route 53: DNS service to route users to the website
-CloudFront: Content Delivery Network for faster global access
-WAF: Web Application Firewall for security
+- Route 53: DNS service to route users to the website
+- CloudFront: Content Delivery Network for faster global access
+- WAF: Web Application Firewall for security
 
 Instead of S3 for static content, we'll use:
-
-EC2 instances in an Auto Scaling group behind an Application Load Balancer to host the dynamic website
-
+- EC2 instances in an Auto Scaling group behind an Application Load Balancer to host the dynamic website
 
 Backend:
-
-API Gateway: Manages API requests
-Elastic Beanstalk: Hosts the Java application
-EC2 instances: Additional compute resources if needed
-Cognito: Handles user authentication
+- API Gateway: Manages API requests
+- Elastic Beanstalk: Hosts the Java application
+- EC2 instances: Additional compute resources if needed
+- Cognito: Handles user authentication
 
 
 Database:
-
-RDS MySQL: Stores relational data
-ElastiCache: Provides caching for improved performance
+- RDS MySQL: Stores relational data
+- ElastiCache: Provides caching for improved performance
 
 
 Data Analytics:
-
-S3 (Data Lake): Stores large amounts of raw data
-EMR: Runs Hadoop workloads
-Glue: Performs ETL jobs
-Athena: Queries data in S3
-QuickSight: Visualizes data
+- S3 (Data Lake): Stores large amounts of raw data
+- EMR: Runs Hadoop workloads
+- Glue: Performs ETL jobs
+- Athena: Queries data in S3
+- QuickSight: Visualizes data
 
 
 Security and Management:
-
-IAM: Manages access permissions
-KMS: Handles encryption keys
-CloudWatch: Monitors resources
-CloudTrail: Logs API activity
-Systems Manager: Manages operational tasks
+- IAM: Manages access permissions
+- KMS: Handles encryption keys
+- CloudWatch: Monitors resources
+- CloudTrail: Logs API activity
+- Systems Manager: Manages operational tasks
 
 Direct Connect: Provides a dedicated network connection from on-premises to AWS
